@@ -1,0 +1,60 @@
+package com.example.MongoDBFirstPractice.collections;
+
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * r0m09yu
+ */
+
+@Data
+@Setter
+@Getter
+@Document(collection = "TejaPromotions")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Promotion {
+
+	@Id
+	@MongoId(FieldType.OBJECT_ID)
+	private String  _id;
+	
+	private Integer promotionID;		
+	private String promotionDescription;	
+	private String promotionType;			
+	private Date startDate;				
+	private Date endDate;				
+	private String status;					
+	private String valueChange;			
+	private Integer noOfPromo;
+	public Integer getPromotionID() {
+		// TODO Auto-generated method stub
+		return promotionID;
+	}
+	public String promotionDescription() {
+		// TODO Auto-generated method stub
+		return promotionDescription;
+	}
+	
+	public String getValueChange() {
+		// TODO Auto-generated method stub
+		return valueChange;
+	}				
+
+}
+
+
+
+

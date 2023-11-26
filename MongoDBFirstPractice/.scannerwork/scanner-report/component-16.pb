@@ -1,0 +1,1 @@
+ 2javaX=hrIsrc/main/java/com/example/MongoDBFirstPractice/collections/Promotion.java
